@@ -11,13 +11,16 @@ export default {
       fontFamily: {
         openSans: ['OpenSans'],
       },
-    },
-    colors: {
-      green: '#46A358',
-      darkGray: '#3D3D3D',
-      gray: '#727272'
+      colors: {
+        green: '#46A358',
+        greenHover: '#336c3f',
+        darkGray: '#3D3D3D',
+        gray: '#727272'
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')
+  ],
 }
 

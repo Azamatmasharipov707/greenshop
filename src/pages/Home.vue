@@ -1,12 +1,11 @@
 <template>
     <div>
-        <nav class="container">
-            <h1 class="text-green text-3xl capitalize">logo</h1>
-        </nav>
+       <Navbar />
     </div>
 </template>
 
 <script setup>
+import Navbar from '@/components/Navbar.vue';
 import { Icon } from '@iconify/vue';
 </script>
 
