@@ -39,7 +39,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="lg:hidden mt-4 py-6">
+            <div class="lg:hidden mt-4 py-6 relative z-10 ">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center gap-x-2 px-3 bg-[#f8f8f8] w-full mr-2 rounded-2xl">
                         <Icon icon="material-symbols:search" class="text-4xl text-[#A5A5A5]" />
