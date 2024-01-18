@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container">
-            <Carousel :autoplay="0" :wrap-around="true" class="mt-3 bg-zinc-100">
+            <Carousel :autoplay="3000" :wrap-around="true" class="mt-3 bg-zinc-100">
                 <Slide v-for="slide in 3" :key="slide" class="pt-3 pb-3 xl:pt-16 xl:pb-20 px-4 xl:px-10 flex flex-col md:flex-row">
                     <div class="text-center md:text-left">
                         <p class="text-sm font-medium text-darkGray mb-2 tracking-[1.4px] uppercase">Welcome to GreenShop
