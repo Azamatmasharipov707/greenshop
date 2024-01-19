@@ -5,7 +5,7 @@
       <li>Shop <span class="mx-1">/</span></li>
       <li>Checkout</li>
     </ul>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 md:  sm:grid-cols-1 lg:justify-end gap-x-[22px] mb-[210px]">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 md: sm:grid-cols-1 gap-x-[22px] mb-[210px]">
       <!-- colonka start 1 -->
       <form action="">
         <h3 class="text-darkGray font-semibold">Billing Address</h3>
@@ -87,14 +87,8 @@
           <!-- input -->
           <!-- Textare -->
           <div>
-            <label for="" class="text-darkGray h-[152px]">Order notes (optional)</label>
-            <textarea
-              name=""
-              id=""
-              class="w-full border mt-3 text-alfa outline-none rounded mb-4"
-              cols="30"
-              rows="7"
-            ></textarea>
+            <label for="" class="text-darkGray">Order notes (optional)</label>
+           <textarea name="" class="w-full h-[152px] border text-alfa rounded outline-none my-4 resize-none" ></textarea>
           </div>
           <!-- Textare -->
         </div>
@@ -162,7 +156,7 @@
       <!-- colonka end 2 -->
 
       <!-- colonka start 3 -->
-      <div>
+      <div v-for="order in orders">
         <h3 class="text-darkGray font-semibold">Your Order</h3>
         <div class="flex justify-between mt-[21px] text-darkGray">
           <p class="font-medium text-darkGray">Products</p>
@@ -177,70 +171,71 @@
             <div class="w-[70px] h-[70px] mr-3">
               <img
                 class="w-full h-full object-cover"
-                src="../../public/img/Shop 1.png"
+                :src="order.img"
                 alt=""
               />
             </div>
             <!-- img -->
             <div>
-              <h3 class="text-darkGray font-medium">Barberton Daisy</h3>
+              <h3 class="text-darkGray font-medium">{{ order.title }}</h3>
               <p class="text-sm mt-1.5 text-darkGray">
-                <span class="text-gray">SKU:</span> 1995751877966
+                <span class="text-gray">SKU:</span> {{ order.sk }}
               </p>
             </div>
           </div>
-          <span class="text-gray text-sm w-8">(x 2)</span>
-          <span class="text-green text-lg font-bold w-[82px] ml-1">$238.00</span>
+          <span class="text-gray text-sm w-8">(x {{ order.num }})</span>
+          <span class="text-green text-lg font-bold w-[82px] ml-1">{{ order.price }}</span>
         </div>
-        <!-- card -->
-        <!-- card -->
         <div class="flex justify-between items-center mb-2.5">
+          <!-- card -->
           <div class="flex items-center max-w-[230px]">
+            <!-- img -->
             <div class="w-[70px] h-[70px] mr-3">
               <img
                 class="w-full h-full object-cover"
-                src="../../public/img/Shop 2.png"
+                :src="order.img"
                 alt=""
               />
             </div>
+            <!-- img -->
             <div>
-              <h3 class="text-darkGray font-medium">Blushing Bromeliad</h3>
+              <h3 class="text-darkGray font-medium">{{ order.title }}</h3>
               <p class="text-sm mt-1.5 text-darkGray">
-                <span class="text-gray">SKU:</span> 1995751877966
+                <span class="text-gray">SKU:</span> {{ order.sk }}
               </p>
             </div>
           </div>
-          <span class="text-gray text-sm w-8">(x 6)</span>
-          <span class="text-green text-lg font-bold w-[82px] ml-1">$834.00</span>
+          <span class="text-gray text-sm w-8">(x {{ order.num }})</span>
+          <span class="text-green text-lg font-bold w-[82px] ml-1">{{ order.price }}</span>
         </div>
-        <!-- card -->
-        <!-- card -->
-
         <div class="flex justify-between items-center mb-2.5">
+          <!-- card -->
           <div class="flex items-center max-w-[230px]">
+            <!-- img -->
             <div class="w-[70px] h-[70px] mr-3">
               <img
                 class="w-full h-full object-cover"
-                src="../../public/img/Shop 3.png"
+                :src="order.img"
                 alt=""
               />
             </div>
-
+            <!-- img -->
             <div>
-              <h3 class="text-darkGray font-medium">Aluminum Plant</h3>
+              <h3 class="text-darkGray font-medium">{{ order.title }}</h3>
               <p class="text-sm mt-1.5 text-darkGray">
-                <span class="text-gray">SKU:</span> 1995751877966
+                <span class="text-gray">SKU:</span> {{ order.sk }}
               </p>
             </div>
           </div>
-          <span class="text-gray text-sm w-8">(x 9)</span>
-          <span class="text-green text-lg font-bold w-[82px] ml-1">$1,611.00</span>
+          <span class="text-gray text-sm w-8">(x {{ order.num }})</span>
+          <span class="text-green text-lg font-bold w-[82px] ml-1">{{ order.price }}</span>
         </div>
         <!-- card -->
+        
         <!-- Totol -->
         <div class="grid justify-end">
           <!-- Summa -->
-          <div class="flex items-center max-w-[321px] w-full">
+          <div class="flex items-center max-w-[321px] w-full" >
             <div class="grid gap-4">
               <p class="text-sm text-darkGray">Subtotal</p>
               <p class="text-sm text-darkGray">Coupon Discount</p>
@@ -267,16 +262,18 @@
             <h3 class="text-darkGray font-bold mt-12 mb-5">Payment Method</h3>
             <div class="grid gap-4 mb-[49px]">
               <div class="flex gap-2.5 items-center border p-3 rounded text-[#EAEAEA]">
-                <input type="radio" id="foo" class="mr-2 accent-green w-4 h-4" />
-                <img src="../../public/img/Payme.png" alt="">
+                <input type="radio" name="job" id="too" class="mr-2 accent-green w-4 h-4" />
+                <label for="too">
+                  <img src="../../public/img/Payme.png" alt="">
+                </label>
               </div>
               <div class="flex gap-2.5 items-center border p-3 rounded text-[#EAEAEA]">
-                <input type="radio" id="foo" class="mr-2 accent-green w-4 h-4" />
-               <p class="text-sm text-darkGray">Dorect bank transfer</p>
+                <input type="radio" name="job" id="roo" class="mr-2 accent-green w-4 h-4" />
+               <label for="roo" class="text-sm text-darkGray">Dorect bank transfer</label>
               </div>
               <div class="flex gap-2.5 items-center border p-3 rounded text-[#EAEAEA]">
-                <input type="radio" id="foo" class="mr-2 accent-green w-4 h-4" />
-                <p class="text-sm text-darkGray">Cash on delivery</p>
+                <input type="radio" name="job" id="goo" class="mr-2 accent-green w-4 h-4" />
+                <label for="goo" class="text-sm text-darkGray">Cash on delivery</label>
               </div>
             </div>
             <button class="text-sm text-white w-full py-3 bg-green rounded">Place Order</button>
@@ -297,4 +294,20 @@ import { ref } from "vue";
 let text = ref("");
 
 const requaried = ref(true);
+const orders = [
+  {
+    img:'../../public/img/Shop 1.png',
+    title:'Barberton Daisy',
+    sk:'1995751877966',
+    num:'2',
+    price: '$238.00'
+  }
+]
+
+
+
+
+
+
+
 </script>
