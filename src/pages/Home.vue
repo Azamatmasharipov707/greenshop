@@ -4,10 +4,12 @@
        <Header />
        <Categories />
        <Offering />
+       <BlogPost />
     </div>
 </template>
 
 <script setup>
+import BlogPost from '@/components/BlogPost.vue';
 import Categories from '@/components/Categories.vue';
 import Header from '@/components/Header.vue';
 import Navbar from '@/components/Navbar.vue';
