@@ -5,6 +5,7 @@
        <Categories />
        <Offering />
        <BlogPost />
+       <Footer />
     </div>
 </template>
 
@@ -13,8 +14,8 @@ import BlogPost from '@/components/BlogPost.vue';
 import Categories from '@/components/Categories.vue';
 import Header from '@/components/Header.vue';
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 import Offering from '@/components/Offering.vue';
-import { Icon } from '@iconify/vue';
 </script>
 
 <style lang="scss" scoped>

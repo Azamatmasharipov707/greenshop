@@ -2,7 +2,7 @@
     <section class="mt-11 mb-32">
         <div class="container">
             <div class="flex gap-x-12">
-                <div class="bg-zinc-100 max-w-[310px] w-full h-max p-5">
+                <div class="bg-zinc-100 max-w-[310px] w-full h-max p-5 hidden lg:block">
                     <p class="text-lg text-darkGray font-bold mb-2">Categories</p>
                     <ul>
                         <li v-for="item, index in categorLink" :key="index" class="ml-3">
@@ -34,26 +34,26 @@
                     </div>
                 </div>
                 <div class="w-full relative overflow-hidden">
-                    <div class="flex justify-between">
-                        <ul class="flex items-center gap-x-9 text-[15px] ">
+                    <div class="flex justify-between items-center">
+                        <ul class="flex items-center gap-x-2 md:gap-x-9 text-[15px] ">
                             <li>
-                                <button class="py-2 relative before:block before:absolute before:w-full before:bottom-0 hover:before:h-1 before:bg-green">All Plants</button>
+                                <button class="py-2 relative before:block before:absolute before:w-full before:bottom-0 hover:before:h-1 before:bg-green text-sm sm:text-base">All Plants</button>
                             </li>
                             <li>
-                                <button class="py-2 relative before:block before:absolute before:w-full before:bottom-0 hover:before:h-1 before:bg-green">New Arrivals</button>
+                                <button class="py-2 relative before:block before:absolute before:w-full before:bottom-0 hover:before:h-1 before:bg-green text-sm sm:text-base">New Arrivals</button>
                             </li>
                             <li>
-                                <button class="py-2 relative before:block before:absolute before:w-full before:bottom-0 hover:before:h-1 before:bg-green">Sale</button>
+                                <button class="py-2 relative before:block before:absolute before:w-full before:bottom-0 hover:before:h-1 before:bg-green text-sm sm:text-base">Sale</button>
                             </li>
                         </ul>
-                        <div>
+                        <div class="text-sm sm:text-base">
                             Short by:
                             <select>
                                 <option value="">Default sorting</option>
                             </select>
                         </div>
                     </div>
-                    <div class="grid grid-cols-3 gap-x-9 gap-y-16 mt-8">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-3 md:gap-x-9 md:gap-y-16 mt-8">
                         <ProductCard v-for="item in 9" />
                     </div>
                     <div class="flex items-center gap-x-2 mt-20 justify-end">
