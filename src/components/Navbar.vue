@@ -87,7 +87,7 @@ import { ref } from 'vue';
 
 const links = ref([
     { link: '/', text: 'Home' },
-    { link: '/', text: 'Shop' },
+    { link: '/shop', text: 'Shop' },
     { link: '/', text: 'Plant Care' },
     { link: '/', text: 'Blogs' },
 ])
