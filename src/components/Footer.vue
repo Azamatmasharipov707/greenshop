@@ -46,7 +46,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="grid sm:grid-cols-3 sm:text-center sm:place-items-center lg:place-items-baseline lg:grid-cols-4 gap-y-5 py-8 border-b-[1px] border-b-[#46A358]">
+            <div class="grid sm:grid-cols-3 sm:text-center lg:text-left sm:place-items-center lg:place-items-baseline lg:grid-cols-4 gap-y-5 py-8 border-b-[1px] border-b-[#46A358]">
                 <ul>
                     <h3 class="text-lg font-bold text-darkGray capitalize mb-2">My Account</h3>
                     <li>
