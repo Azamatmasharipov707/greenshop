@@ -90,6 +90,7 @@ const links = ref([
     { link: '/shop', text: 'Shop' },
     { link: '/', text: 'Plant Care' },
     { link: '/', text: 'Blogs' },
+    { link: '/shoppingCart', text: 'Shopping cart' },
 ])
 
 let activeClose = ref(true)
