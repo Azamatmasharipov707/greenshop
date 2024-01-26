@@ -16,7 +16,8 @@ export default {
         greenHover: '#336c3f',
         darkGray: '#3D3D3D',
         gray: '#727272',
-        alfa:'#A5A5A5'
+        alfa:'#A5A5A5',
+        grizzle: '#FBFBFB',
       },
     },
   },

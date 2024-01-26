@@ -164,7 +164,7 @@
         </div>
         <hr class="text-slate-400 my-3" />
 
-        <div class="flex justify-between items-center mb-2.5">
+        <div class="flex justify-between items-center mb-2.5 bg-grizzle">
           <!-- card -->
           <div class="flex items-center max-w-[230px]">
             <!-- img -->
@@ -186,7 +186,7 @@
           <span class="text-gray text-sm w-8">(x {{ order.num }})</span>
           <span class="text-green text-lg font-bold w-[82px] ml-1">{{ order.price }}</span>
         </div>
-        <div class="flex justify-between items-center mb-2.5">
+        <div class="flex justify-between items-center mb-2.5 bg-grizzle">
           <!-- card -->
           <div class="flex items-center max-w-[230px]">
             <!-- img -->
@@ -208,7 +208,7 @@
           <span class="text-gray text-sm w-8">(x {{ order.num }})</span>
           <span class="text-green text-lg font-bold w-[82px] ml-1">{{ order.price }}</span>
         </div>
-        <div class="flex justify-between items-center mb-2.5">
+        <div class="flex justify-between items-center mb-2.5 bg-grizzle ">
           <!-- card -->
           <div class="flex items-center max-w-[230px]">
             <!-- img -->
@@ -276,7 +276,7 @@
                 <label for="goo" class="text-sm text-darkGray">Cash on delivery</label>
               </div>
             </div>
-            <button class="text-sm text-white w-full py-3 bg-green rounded">Place Order</button>
+            <button class="text-sm hover:bg-greenHover text-white w-full py-3 bg-green rounded">Place Order</button>
 
           </div>
           <!-- Payme -->
@@ -302,7 +302,8 @@ const orders = [
     num:'2',
     price: '$238.00'
   }
-]
+];
+
 
 
 
