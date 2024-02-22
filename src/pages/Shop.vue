@@ -216,7 +216,8 @@
                 <h3 class="pb-3 text-green font-bold text-lg border-b-[1px]">Releted Products</h3>
                 <div>
                     <Carousel :autoplay="3000" :items-to-show="5" :wrap-around="true" class="mt-3">
-                        <Slide v-for="slide in 3" :key="slide" class="pt-3 pb-3 xl:pt-16 xl:pb-20 px-4 xl:px-10 flex flex-col md:flex-row">
+                        <Slide v-for="slide in 3" :key="slide"
+                            class="pt-3 pb-3 xl:pt-16 xl:pb-20 px-4 xl:px-10 flex flex-col md:flex-row">
                             <ProductCard />
                         </Slide>
                         <template #addons>
@@ -234,7 +235,7 @@
 import Footer from '@/components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
 import ProductCard from '@/components/ProductCard.vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { Icon } from '@iconify/vue';
 
 import { Carousel, Pagination, Slide } from 'vue3-carousel'
@@ -255,7 +256,6 @@ const decrement = () => {
 const descIndex = ref(1)
 
 
-
 </script>
 
 <style lang="scss">
@@ -266,7 +266,8 @@ const descIndex = ref(1)
     background: #46A3584D;
 }
 
-.carousel__pagination-button.carousel__pagination-button--active .carousel__pagination-button:hover::after, .carousel__pagination-button--active::after {
-   background: green;
+.carousel__pagination-button.carousel__pagination-button--active .carousel__pagination-button:hover::after,
+.carousel__pagination-button--active::after {
+    background: green;
 }
 </style>
